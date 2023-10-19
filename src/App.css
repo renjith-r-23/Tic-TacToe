@@ -2,57 +2,51 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #222831; /* Updated background color */
-  color: #eee; /* Updated text color */
-  font-family: Arial, sans-serif; /* Updated font family */
+  background-color: #23272f;
+  color: white;
 }
 
 h1 {
   text-align: center;
-  color: #0074a6; /* Updated heading color */
 }
 
 .board {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
   cursor: pointer;
   position: relative;
 }
 
 .tile {
-  color: #eee; /* Updated text color */
+  color: currentColor;
   font-size: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #0074a6; /* Updated border style */
-  background-color: #393e46; /* Updated tile background color */
 }
 
 .right-border {
-  border-right: 2px solid #0074a6; /* Updated right border style */
+  border-right: 0.2em solid #ff6600; /* Updated to orange color (#ff6600) */
 }
 
 .bottom-border {
-  border-bottom: 2px solid #0074a6; /* Updated bottom border style */
+  border-bottom: 0.2em solid #ff6600; /* Updated to orange color (#ff6600) */
 }
 
 .x-hover:hover::after {
   content: "X";
-  opacity: 0.7; /* Slightly increased opacity */
-  color: #0074a6; /* Updated X color on hover */
+  opacity: 0.4;
 }
 
 .o-hover:hover::after {
   content: "O";
-  opacity: 0.7; /* Slightly increased opacity */
-  color: #f05454; /* Updated O color on hover */
+  opacity: 0.4;
 }
 
 .strike {
   position: absolute;
-  background-color: #f05454; /* Updated strike background color */
+  background-color: #ff6600; /* Updated to orange color (#ff6600) */
 }
 
 .strike-row-1 {
@@ -104,20 +98,18 @@ h1 {
 
 .game-over {
   text-align: center;
-  border: 8px dashed #0074a6; /* Updated border style */
-  padding: 15px; /* Updated padding */
+  border: #5468ff 8px;
+  border-style: dotted;
+  padding: 10px;
   margin-top: 50px;
-  font-size: 1.8em; /* Slightly increased font size */
-  color: #0074a6; /* Updated text color */
+  font-size: 1.5em;
 }
 
 .reset-button {
-  margin-top: 30px; /* Adjusted margin */
-  padding: 15px; /* Reduced padding */
-  background-color: #0074a6;
-  color: #eee; /* Updated text color */
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #ff6600; /* Updated to orange color (#ff6600) */
+  color: white;
   width: 100%;
   font-size: 1.5em;
-  border: none; /* Removed button border */
-  cursor: pointer;
 }
