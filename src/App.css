@@ -24,14 +24,15 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 0.2em solid #ff6600; /* Added square border with 0.2em width */
 }
 
 .right-border {
-  border-right: 0.2em solid #ff6600; /* Updated to orange color (#ff6600) */
+  border-right: 0.2em solid #ff6600; /* Added square border with 0.2em width */
 }
 
 .bottom-border {
-  border-bottom: 0.2em solid #ff6600; /* Updated to orange color (#ff6600) */
+  border-bottom: 0.2em solid #ff6600; /* Added square border with 0.2em width */
 }
 
 .x-hover:hover::after {
@@ -39,14 +40,14 @@ h1 {
   opacity: 0.4;
 }
 
-.o-hover:hover::after {
+o-hover:hover::after {
   content: "O";
   opacity: 0.4;
 }
 
 .strike {
   position: absolute;
-  background-color: #ff6600; /* Updated to orange color (#ff6600) */
+  background-color: #ff6600;
 }
 
 .strike-row-1 {
@@ -108,7 +109,7 @@ h1 {
 .reset-button {
   margin-top: 50px;
   padding: 20px;
-  background-color: #ff6600; /* Updated to orange color (#ff6600) */
+  background-color: #ff6600;
   color: white;
   width: 100%;
   font-size: 1.5em;
