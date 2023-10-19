@@ -2,51 +2,46 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #23272f;
-  color: white;
+  background-color: #f0f0f0; /* Updated background color */
+  color: #333; /* Updated text color */
+  font-family: Arial, sans-serif; /* Updated font family */
 }
 
 h1 {
   text-align: center;
+  color: #0074a6; /* Updated heading color */
 }
 
 .board {
   display: grid;
-  grid-template-columns: 100px 100px 100px;
-  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
   cursor: pointer;
   position: relative;
 }
 
 .tile {
-  color: currentColor;
+  color: #333; /* Updated text color */
   font-size: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.right-border {
-  border-right: 0.2em solid #0074a6;
-}
-
-.bottom-border {
-  border-bottom: 0.2em solid #0074a6;
+  border: 1px solid #0074a6; /* Added a border for tiles */
 }
 
 .x-hover:hover::after {
   content: "X";
-  opacity: 0.4;
+  opacity: 0.6; /* Slightly increased opacity */
 }
 
 .o-hover:hover::after {
   content: "O";
-  opacity: 0.4;
+  opacity: 0.6; /* Slightly increased opacity */
 }
 
 .strike {
   position: absolute;
-  background-color: darkorange;
+  background-color: #0074a6; /* Updated strike color */
 }
 
 .strike-row-1 {
@@ -64,6 +59,7 @@ h1 {
   height: 4px;
   top: 83%;
 }
+
 .strike-column-1 {
   height: 100%;
   width: 4px;
@@ -79,6 +75,7 @@ h1 {
   width: 4px;
   left: 83%;
 }
+
 .strike-diagonal-1 {
   width: 90%;
   height: 4px;
@@ -96,15 +93,23 @@ h1 {
 
 .game-over {
   text-align: center;
-  border: #5468ff 8px;
-  border-style: dotted;
-  padding: 10px;
+  border: 4px dashed #0074a6; /* Updated border style */
+  padding: 20px; /* Increased padding */
   margin-top: 50px;
-  font-size: 1.5em;
+  font-size: 1.8em; /* Slightly increased font size */
+  color: #0074a6; /* Updated text color */
 }
 
 .reset-button {
-  margin-top: 50px;
+  margin-top: 30px; /* Adjusted margin */
+  padding: 15px; /* Reduced padding */
+  background-color: #0074a6;
+  color: white;
+  width: 100%;
+  font-size: 1.5em;
+  border: none; /* Removed button border */
+  cursor: pointer;
+}
   padding: 20px;
   background-color: #0074a6;
   color: white;
